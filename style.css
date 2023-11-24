@@ -19,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1vw;
+    padding: 1.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,12 +29,12 @@ header {
 }
 
 .logo {
-    font-size: 1.5vw;
+    font-size: 2vw;
     color: rgb(68, 60, 60);
     cursor: default;
     border-radius: 0.5vw;
     background-color: white;
-    padding: 0.3vw;
+    padding: 0.5vw;
 }
 
 span {
@@ -48,7 +48,7 @@ span {
 }
 
 .navigation a {
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: rgb(68, 60, 60);
     text-decoration: none;
     margin-right: 0.5vw;
@@ -58,7 +58,7 @@ span {
 }
 
 .tombol-download {
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: white;
     text-decoration: none;
     padding: 0.2vw 0.8vw;
@@ -116,7 +116,7 @@ span {
 }
 
 .grup-tombol a {
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: white;
     text-decoration: none;
     padding: 0.2vw 0.8vw;
@@ -179,45 +179,24 @@ span {
     }
 
     .navigation a,
-    .tombol-download {
-        font-size: 1.2vw;
-        padding: 0.2vw 0.6vw;
-        margin-right: 0.5vw;
+    .tombol-download,
+    .grup-tombol a,
+    .sosmed a {
+        font-size: 1vw;
+        padding: 0.1vw 0.5vw;
+        margin-right: 0.2vw;
+        width: 1vw;
+        height: 1vw;
+        line-height: 1vw;
+        border-radius: 0.2vw;
+        outline: 0.05vw solid orange;
     }
 
     .home {
-        padding: 3vh 3vw;
+        padding: 2vh 2vw;
     }
 
     .content {
-        max-width: 90vw;
-    }
-
-    .grup-tombol {
-        margin-bottom: 3vh;
-    }
-
-    .grup-tombol a {
-        font-size: 1.2vw;
-        padding: 0.2vw 0.6vw;
-        margin-right: 0.3vw;
-    }
-
-    .sosmed {
-        bottom: 1.5vh;
-        left: 1.5vw;
-        margin: 0.4vw;
-    }
-
-    .sosmed a {
-        width: 3vw;
-        height: 3vw;
-        margin-right: 0.3vw;
-        line-height: 3vw;
-        outline: 0.15vw solid orange;
-    }
-
-    .sosmed a i {
-        font-size: 1.2vw;
+        max-width: 80vw;
     }
 }
