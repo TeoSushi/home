@@ -1,48 +1,160 @@
+@font-face {
+    font-family: 'HYImpact-Regular';
+    src: url('font/HYImpact-Regular.ttf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'HYImpact-Regular', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: pink;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-nav {
-    background-color: #f2f2f2;
-    padding: 1em;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
     position: fixed;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: pink;
+}
+
+.logo {
+    font-size: 2em;
+    color: rgb(68, 60, 60);
+    cursor: default;
+}
+
+span {
+    color: orange;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: rgb(68, 60, 60);
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: orange;
+}
+
+.tombol-download {
+    color: white;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: orange;
+    border-radius: 10px;
+    border: 2px solid orange;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.tombol-download:hover {
+    color: orange;
+    background: transparent;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(background.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    color: rgb(68, 60, 60);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.content h4 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 40px;
+}
+
+.grup-tombol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.grup-tombol a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: orange;
+    border-radius: 10px;
+    border: 2px solid orange;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+
+.grup-tombol a:last-child {
+    margin-right: 0;
+}
+
+.grup-tombol a:hover {
+    color: orange;
+    background: transparent;
+}
+
+.sosmed {
+    position: absolute;
+    bottom: 50px;
+}
+
+.sosmed a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    outline: 3px solid orange;
+    transition: 0.3s;
+}
+
+.sosmed a:hover {
+    transform: translateY(-5px);
+}
+
+.sosmed a i {
+    color: rgb(68, 60, 60);
+    font-size: 20px;
 }
