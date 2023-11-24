@@ -19,18 +19,22 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 1vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    background-color: pink;
+    z-index: 1000;
+    backdrop-filter: blur(0.5vw);
+    border-radius: 0.5vw;
 }
 
 .logo {
-    font-size: 2em;
+    font-size: 1.5vw;
     color: rgb(68, 60, 60);
     cursor: default;
+    border-radius: 0.5vw;
+    background-color: white;
+    padding: 0.3vw;
 }
 
 span {
@@ -40,30 +44,30 @@ span {
 .navigation {
     display: flex;
     align-items: center;
+    z-index: 1000;
 }
 
 .navigation a {
-    font-size: 1.1em;
+    font-size: 1vw;
     color: rgb(68, 60, 60);
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 0.5vw;
     font-weight: 500;
     transition: 0.3s;
-}
-
-.navigation a:hover {
-    color: orange;
+    z-index: 1000;
 }
 
 .tombol-download {
+    font-size: 1vw;
     color: white;
     text-decoration: none;
-    padding: 8px 35px;
+    padding: 0.2vw 0.8vw;
     background: orange;
-    border-radius: 10px;
-    border: 2px solid orange;
+    border-radius: 0.3vw;
+    border: 0.1vw solid orange;
     font-weight: 500;
     transition: 0.3s;
+    z-index: 1000;
 }
 
 .tombol-download:hover {
@@ -75,52 +79,54 @@ span {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url(background.jpg);
+    background: url('background.jpg');
     background-size: cover;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     align-items: center;
-    padding: 30px 100px;
+    padding: 2vh 2vw;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .content {
-    max-width: 800px;
+    max-width: 80vw;
     width: 100%;
     color: rgb(68, 60, 60);
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-.content h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.content h4 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
+.content h2,
+.content h4,
 .content p {
-    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .grup-tombol {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 2vh;
+    position: relative;
+    z-index: 2;
 }
 
 .grup-tombol a {
+    font-size: 1vw;
     color: white;
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 0.2vw 0.8vw;
     background: orange;
-    border-radius: 10px;
-    border: 2px solid orange;
+    border-radius: 0.3vw;
+    border: 0.1vw solid orange;
     font-weight: 500;
     transition: 0.3s;
-    margin-right: 20px;
+    margin-right: 0.3vw;
+    z-index: 1000;
 }
 
 .grup-tombol a:last-child {
@@ -133,28 +139,85 @@ span {
 }
 
 .sosmed {
-    position: absolute;
-    bottom: 50px;
+    position: fixed;
+    bottom: 2vh;
+    left: 2vw;
+    margin: 0.5vh;
+    z-index: 1000;
 }
 
 .sosmed a {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 1.5vw;
+    height: 1.5vw;
     background: transparent;
     border-radius: 50%;
-    margin-right: 22px;
+    margin-right: 0.3vw;
     text-align: center;
-    line-height: 35px;
-    outline: 3px solid orange;
+    line-height: 1.5vw;
+    outline: 0.1vw solid orange;
     transition: 0.3s;
 }
 
 .sosmed a:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.1vw);
 }
 
 .sosmed a i {
-    color: rgb(68, 60, 60);
-    font-size: 20px;
+    font-size: 0.7vw;
+}
+
+/* Thêm media query để điều chỉnh kích thước và khoảng cách cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5vw;
+    }
+
+    .logo {
+        font-size: 2vw;
+        padding: 0.5vw;
+    }
+
+    .navigation a,
+    .tombol-download {
+        font-size: 1.2vw;
+        padding: 0.2vw 0.6vw;
+        margin-right: 0.5vw;
+    }
+
+    .home {
+        padding: 3vh 3vw;
+    }
+
+    .content {
+        max-width: 90vw;
+    }
+
+    .grup-tombol {
+        margin-bottom: 3vh;
+    }
+
+    .grup-tombol a {
+        font-size: 1.2vw;
+        padding: 0.2vw 0.6vw;
+        margin-right: 0.3vw;
+    }
+
+    .sosmed {
+        bottom: 1.5vh;
+        left: 1.5vw;
+        margin: 0.4vw;
+    }
+
+    .sosmed a {
+        width: 3vw;
+        height: 3vw;
+        margin-right: 0.3vw;
+        line-height: 3vw;
+        outline: 0.15vw solid orange;
+    }
+
+    .sosmed a i {
+        font-size: 1.2vw;
+    }
 }
