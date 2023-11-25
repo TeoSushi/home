@@ -1,8 +1,10 @@
+/* Font Face */
 @font-face {
     font-family: 'HYImpact-Regular';
     src: url('font/HYImpact-Regular.ttf') format('truetype');
 }
 
+/* Body Styles */
 body {
     font-family: 'HYImpact-Regular', sans-serif;
     margin: 0;
@@ -11,10 +13,12 @@ body {
     transition: background-color 1s ease-in-out;
 }
 
+/* Box Sizing */
 * {
     box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
     position: fixed;
     top: 0;
@@ -29,6 +33,7 @@ header {
     border-radius: 0.5vw;
 }
 
+/* Logo Styles */
 .logo {
     font-size: 1.8vw;
     color: rgb(68, 60, 60);
@@ -42,6 +47,7 @@ span {
     color: orange;
 }
 
+/* Navigation Styles */
 .navigation {
     display: flex;
     align-items: center;
@@ -58,6 +64,7 @@ span {
     z-index: 1000;
 }
 
+/* Download Button Styles */
 .tombol-download {
     font-size: 1.4vw;
     color: white;
@@ -76,6 +83,7 @@ span {
     background: transparent;
 }
 
+/* Home Section Styles */
 .home {
     position: relative;
     width: 100%;
@@ -90,6 +98,7 @@ span {
     z-index: 1;
 }
 
+/* Content Styles */
 .content {
     max-width: 80vw;
     width: 100%;
@@ -107,6 +116,7 @@ span {
     z-index: 2;
 }
 
+/* Button Group Styles */
 .grup-tombol {
     display: flex;
     justify-content: center;
@@ -139,6 +149,7 @@ span {
     background: transparent;
 }
 
+/* Social Media Styles */
 .sosmed {
     position: fixed;
     bottom: 2vh;
@@ -168,6 +179,7 @@ span {
     font-size: 0.9vw;
 }
 
+/* Transparent Effect Styles */
 .transparent-effect {
     transition: background-color 1s ease-in-out;
 }
@@ -176,6 +188,7 @@ body.transparent-effect {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Transparent Overlay Styles */
 .transparent-overlay {
     position: fixed;
     top: 0;
@@ -187,6 +200,7 @@ body.transparent-effect {
     display: none;
 }
 
+/* Spinner Container Styles */
 .spinner-container {
     width: 150px;
     height: 150px;
@@ -195,10 +209,11 @@ body.transparent-effect {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    z-index: 1000;
+    z-index: 2000;
     display: none;
 }
 
+/* Spinner Styles */
 .spinner {
     position: absolute;
     width: calc(100% - 20px);
@@ -207,8 +222,7 @@ body.transparent-effect {
     border-radius: 50%;
     border-top-color: #fff;
     animation: spin 1s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
-    backdrop-filter: none;
-    z-index: 1001;
+    z-index: 2001;
 }
 
 @keyframes spin {
@@ -221,6 +235,7 @@ body.transparent-effect {
     }
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     header {
         padding: 1.8vw;
