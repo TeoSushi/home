@@ -1,10 +1,8 @@
-/* Font Face */
 @font-face {
     font-family: 'HYImpact-Regular';
     src: url('font/HYImpact-Regular.ttf') format('truetype');
 }
 
-/* Body Styles */
 body {
     font-family: 'HYImpact-Regular', sans-serif;
     margin: 0;
@@ -13,12 +11,10 @@ body {
     transition: background-color 1s ease-in-out;
 }
 
-/* Box Sizing */
 * {
     box-sizing: border-box;
 }
 
-/* Header Styles */
 header {
     position: fixed;
     top: 0;
@@ -33,7 +29,6 @@ header {
     border-radius: 0.5vw;
 }
 
-/* Logo Styles */
 .logo {
     font-size: 1.8vw;
     color: rgb(68, 60, 60);
@@ -47,7 +42,6 @@ span {
     color: orange;
 }
 
-/* Navigation Styles */
 .navigation {
     display: flex;
     align-items: center;
@@ -64,7 +58,6 @@ span {
     z-index: 1000;
 }
 
-/* Download Button Styles */
 .tombol-download {
     font-size: 1.4vw;
     color: white;
@@ -83,7 +76,6 @@ span {
     background: transparent;
 }
 
-/* Home Section Styles */
 .home {
     position: relative;
     width: 100%;
@@ -98,7 +90,6 @@ span {
     z-index: 1;
 }
 
-/* Content Styles */
 .content {
     max-width: 80vw;
     width: 100%;
@@ -116,7 +107,6 @@ span {
     z-index: 2;
 }
 
-/* Button Group Styles */
 .grup-tombol {
     display: flex;
     justify-content: center;
@@ -149,37 +139,10 @@ span {
     background: transparent;
 }
 
-/* Social Media Styles */
 .sosmed {
-    position: fixed;
-    bottom: 2vh;
-    left: 2vw;
-    margin: 0.5vh;
-    z-index: 1000;
+    display: none; /* Ẩn phần mạng xã hội */
 }
 
-.sosmed a {
-    display: inline-block;
-    width: 1.8vw;
-    height: 1.8vw;
-    background: transparent;
-    border-radius: 50%;
-    margin-right: 0.3vw;
-    text-align: center;
-    line-height: 1.8vw;
-    outline: 0.1vw solid orange;
-    transition: 0.3s;
-}
-
-.sosmed a:hover {
-    transform: translateY(-0.1vw);
-}
-
-.sosmed a i {
-    font-size: 0.9vw;
-}
-
-/* Transparent Effect Styles */
 .transparent-effect {
     transition: background-color 1s ease-in-out;
 }
@@ -188,7 +151,6 @@ body.transparent-effect {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Transparent Overlay Styles */
 .transparent-overlay {
     position: fixed;
     top: 0;
@@ -200,7 +162,6 @@ body.transparent-effect {
     display: none;
 }
 
-/* Spinner Container Styles */
 .spinner-container {
     width: 150px;
     height: 150px;
@@ -213,7 +174,6 @@ body.transparent-effect {
     display: none;
 }
 
-/* Spinner Styles */
 .spinner {
     position: absolute;
     width: calc(100% - 20px);
@@ -233,9 +193,9 @@ body.transparent-effect {
     to {
         transform: rotate(360deg);
     }
+
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     header {
         padding: 1.8vw;
