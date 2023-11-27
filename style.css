@@ -30,12 +30,12 @@ header {
 }
 
 .logo {
-    font-size: 1.8vw;
-    color: rgb(68, 60, 60);
+    max-width: calc(33.33% - 1vw);
+    height: auto;
     cursor: default;
-    border-radius: 0.5vw;
-    background-color: white;
-    padding: 0.3vw;
+    background-color: transparent; /* Đặt màu nền là trong suốt */
+    padding: 0; /* Xoá padding */
+    max-height: 10vh;
 }
 
 span {
@@ -46,6 +46,7 @@ span {
     display: flex;
     align-items: center;
     z-index: 1000;
+    margin-left: 1vw;
 }
 
 .navigation a {
@@ -202,7 +203,8 @@ body.transparent-effect {
     }
 
     .logo {
-        font-size: 2vw;
+        max-width: calc(50% - 1vw);
+        height: auto;
         padding: 0.5vw;
     }
 
