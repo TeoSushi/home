@@ -3,11 +3,10 @@ const countdownComplete = () => {
   countdownCompleted = true;
   window.location = "./hny.html"; 
 };
-document.addEventListener("click", function () {
-  if (countdownCompleted) {
-    window.location = "./hny.html";
-  }
-});
+document.addEventListener("click", function()
+{
+    window.location="./hny.html";
+  });
 
 //countdown
 
