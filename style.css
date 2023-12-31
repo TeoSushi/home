@@ -1,320 +1,73 @@
-@font-face {
-    font-family: 'HYImpact-Regular';
-    src: url('font/HYImpact-Regular.ttf') format('truetype');
+/* Countdown */
+
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+.holder {
+  position: absolute;
+  background-color: #ffffff;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
 }
-
-body {
-    font-family: 'HYImpact-Regular', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: pink;
-    transition: background-color 1s ease-in-out;
-    overflow-x: hidden;
+.new-year {
+  font-family: 'Major Mono Display', monospace;
+  color: #333333;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 }
-
-@media (max-width: 768px) {
-    body {
-        overflow-x: scroll;
-    }
+.year {
+  position: relative;
+  left: 50%;
+  display: table;
+  font-size: 6em;
+  transform: translateX(-50%);
 }
-
-::-webkit-scrollbar {
-    width: 0.5vw;
+.year2 {
+  transform: translateX(-50%) rotateX(180deg);
+  opacity: 0.2;
 }
-
-::-webkit-scrollbar-horizontal {
-    height: 0.5vw;
+.digit {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  opacity: 0;
 }
-
-::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 0.25vw;
+.controls {
+  margin-top: 30px;
 }
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #999;
+.control {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 0.8em;
+  border-left: 1px solid #333333;
+  opacity: 0;
+  position: relative;
+  top: 100px;
 }
-
-::-webkit-scrollbar-thumb:active {
-    background-color: #777;
+.control:first-child {
+  border-left: none;
 }
-
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 0.25vw;
+.triangles {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
-
-.home {
-    overflow-y: scroll;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(0.5vw);
-    border-radius: 0.5vw;
-    transform: translate(0, 0);
-}
-
-.logo-corner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 10px;
-    max-width: 250px;
-    max-height: auto;
-    z-index: 2000;
-}
-
-.logo {
-    max-width: calc(33.33% - 1vw);
-    height: auto;
-    cursor: default;
-    background-color: transparent;
-    padding: 0;
-    max-height: 10vh;
-}
-
-span {
-    color: orange;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-    margin-left: 1vw;
-}
-
-.navigation a {
-    font-size: 1.4vw;
-    color: rgb(68, 60, 60);
-    text-decoration: none;
-    margin-right: 0.5vw;
-    font-weight: 500;
-    transition: 0.3s;
-    z-index: 1000;
-}
-
-.tombol-download {
-    font-size: 1.4vw;
-    color: white;
-    text-decoration: none;
-    padding: 0.2vw 0.8vw;
-    background: orange;
-    border-radius: 0.3vw;
-    border: 0.1vw solid orange;
-    font-weight: 500;
-    transition: 0.3s;
-    z-index: 1000;
-}
-
-.tombol-download:hover {
-    color: orange;
-    background: transparent;
-}
-
-.home {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: url('background.jpg');
-    background-size: cover;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-    align-items: center;
-    padding: 2vh 2vw;
-    overflow-x: auto;
-    overflow-y: auto;
-    z-index: 1;
-    transform: translate(0, 0);
-}
-
-.content {
-    max-width: 80vw;
-    width: 100%;
-    color: rgb(68, 60, 60);
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.content h2,
-.content h4,
-.content p {
-    position: relative;
-    z-index: 2;
-}
-
-.grup-tombol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vh;
-    position: relative;
-    z-index: 2;
-}
-
-.grup-tombol a {
-    font-size: 1.4vw;
-    color: white;
-    text-decoration: none;
-    padding: 0.2vw 0.8vw;
-    background: orange;
-    border-radius: 0.3vw;
-    border: 0.1vw solid orange;
-    font-weight: 500;
-    transition: 0.3s;
-    margin-right: 0.3vw;
-    z-index: 1000;
-}
-
-.grup-tombol a:last-child {
-    margin-right: 0;
-}
-
-.grup-tombol a:hover {
-    color: orange;
-    background: transparent;
-}
-
-.sosmed {
-    display: none;
-}
-
-.transparent-effect {
-    transition: background-color 1s ease-in-out;
-}
-
-body.transparent-effect {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.transparent-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    z-index: 2000;
-    display: none;
-}
-
-.spinner-container {
-    width: 150px;
-    height: 150px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    z-index: 2000;
-    display: none;
-}
-
-.spinner {
-    position: absolute;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    border: 5px solid transparent;
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
-    z-index: 2001;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (max-width: 768px) {
-    header,
-    .logo-corner,
-    .sosmed {
-        position: fixed;
-    }
-
-    header {
-        padding: 1.8vw;
-    }
-
-    .logo {
-        max-width: calc(50% - 1vw);
-        height: auto;
-        padding: 0.5vw;
-    }
-
-    .navigation a,
-    .tombol-download {
-        font-size: 1.6vw;
-        padding: 0.2vw 0.6vw;
-        margin-right: 0.5vw;
-    }
-
-    .home {
-        padding: 3vh 3vw;
-    }
-
-    .content {
-        max-width: 90vw;
-    }
-
-    .grup-tombol {
-        margin-bottom: 3vh;
-    }
-
-    .grup-tombol a {
-        font-size: 1.6vw;
-        padding: 0.2vw 0.6vw;
-        margin-right: 0.3vw;
-    }
-
-    .sosmed {
-        bottom: 1.5vh;
-        left: 1.5vw;
-        margin: 0.4vw;
-    }
-
-    .sosmed a {
-        width: 3.5vw;
-        height: 3.5vw;
-        margin-right: 0.3vw;
-        line-height: 3.5vw;
-        outline: 0.15vw solid orange;
-    }
-
-    .sosmed a i {
-        font-size: 1.6vw;
-    }
-
-    .content,
-    .grup-tombol,
-    .sosmed {
-        transform: translate(0, 0);
-    }
-}
-
-@media (min-width: 769px) {
-    body {
-        overflow-x: hidden;
-    }
+.triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #333333;
+  position: absolute;
+  opacity: 0;
 }
